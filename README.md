@@ -1,11 +1,24 @@
-# Active K9 Academy Landing Page
+# Active K9 Academy Landing Page - React Version
 
-This landing page is built to match the Figma design exactly, including layout, colors, typography, and all visual elements.
+This landing page has been converted to React.js and matches the Figma design exactly, including layout, colors, typography, and all visual elements.
 
 ## Setup Instructions
 
-### Images
-The images have been downloaded from Figma and should be placed in the `images/` directory. The images were downloaded to `C:\Users\zinmi\images\` and need to be copied to this project's `images/` folder.
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+### Images Setup
+The images need to be placed in the `public/images/` directory for React to serve them correctly.
+
+**Important:** Move all images from the root `images/` folder to `public/images/` folder.
 
 Required images:
 - `logo.png` - Company logo
@@ -15,12 +28,57 @@ Required images:
 - `map-screenshot.png` - Map image
 - `contact-image.png` - Contact section image
 - `background-image.png` - Background image
+- `facebook-icon.svg`, `instagram-icon.svg`, `linkedin-icon.svg` - Social media icons
 
 ### Running the Project
 
-1. Copy the images from `C:\Users\zinmi\images\` to `images/` folder in this project
-2. Open `index.html` in a web browser
-3. For development, use a local server (e.g., `python -m http.server` or `npx serve`)
+1. Move images from `images/` to `public/images/` folder
+2. Start the development server:
+```bash
+npm start
+```
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Building for Production
+
+To create a production build:
+```bash
+npm run build
+```
+
+This creates an optimized build in the `build/` folder.
+
+## Project Structure
+
+```
+Landing_Page/
+├── public/
+│   ├── images/          # All images should be here
+│   └── index.html       # HTML template
+├── src/
+│   ├── components/      # React components
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Services.jsx
+│   │   ├── Experience.jsx
+│   │   ├── WhyChoose.jsx
+│   │   ├── KeyOutcomes.jsx
+│   │   ├── HumanFocused.jsx
+│   │   └── Footer.jsx
+│   ├── App.jsx          # Main App component
+│   ├── index.js         # Entry point
+│   └── index.css        # Global styles
+├── package.json
+└── README.md
+```
+
+## Features
+
+- **React Components**: Modular component structure for easy maintenance
+- **Smooth Scrolling**: Navigation links smoothly scroll to sections
+- **Form Handling**: Contact form with React state management
+- **Scroll Animations**: Intersection Observer API for fade-in animations
+- **Responsive Design**: Mobile-friendly layout
 
 ## Design Specifications
 
@@ -40,7 +98,7 @@ Required images:
 
 ### Layout
 - Container Max Width: 1400px
-- Page Height: 4294px (as per Figma design)
+- Responsive breakpoints at 1200px and 768px
 
 ## Sections
 
@@ -62,3 +120,8 @@ This page is designed to work in all modern browsers. For best results, use:
 - Safari (latest)
 - Edge (latest)
 
+## Technologies Used
+
+- React 18.2.0
+- React DOM 18.2.0
+- Create React App

@@ -1,0 +1,823 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text: #331B3B;
+    --primary-bg: #FFFFFF;
+    --accent-orange: #FD5621;
+    --accent-yellow: #FDC221;
+    --light-blue: #ECF7FF;
+    --light-orange: rgba(255, 222, 212, 0.3);
+    --text-secondary: rgba(51, 27, 59, 0.66);
+    --black: #000000;
+    --gray-border: #343434;
+    --map-text: #414141;
+    --map-link: #51A0DC;
+    --quote-text: #D4F0FF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Hind Vadodara', sans-serif;
+    color: var(--primary-text);
+    background-color: var(--primary-bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+/* Header */
+.header {
+    padding: 32px 0;
+    position: relative;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 272px;
+    height: 81px;
+    object-fit: contain;
+}
+
+.navigation {
+    display: flex;
+    gap: 40px;
+}
+
+.navigation a {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.498;
+    letter-spacing: 0.01em;
+    color: var(--primary-text);
+    text-decoration: none;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.navigation a:hover {
+    color: var(--accent-orange);
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 62.76px;
+    height: 64.88px;
+    border: 2px solid rgba(51, 27, 59, 0.64);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.social-icon-img {
+    width: auto;
+    height: auto;
+    max-width: 24px;
+    max-height: 24px;
+    object-fit: contain;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 100px 0 200px;
+    overflow: hidden;
+}
+
+.hero-background-decoration {
+    position: absolute;
+    top: -108px;
+    right: 830px;
+    width: 867.54px;
+    height: 819.82px;
+    background: rgba(254, 200, 40, 0.2);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    position: relative;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 688px;
+}
+
+.hero-title {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 600;
+    font-size: 75px;
+    line-height: 0.998;
+    letter-spacing: -0.01em;
+    color: var(--primary-text);
+    margin-bottom: 40px;
+    max-width: 688px;
+}
+
+.hero-description {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.463;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+    max-width: 515px;
+}
+
+.btn-primary {
+    background-color: var(--primary-text);
+    color: var(--primary-bg);
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.373;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 207px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-orange);
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 721px;
+    height: auto;
+}
+
+/* Services Section */
+.services {
+    padding: 100px 0 150px;
+    background-color: var(--light-blue);
+    position: relative;
+}
+
+.section-title {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.063;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: var(--primary-text);
+    margin-bottom: 80px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px 13px;
+    align-items: start;
+}
+
+.service-card {
+    background-color: var(--primary-bg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+    width: 100%;
+    height: 197px;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-card:nth-child(1) .service-image {
+    height: 197px;
+}
+
+.service-card:nth-child(2) .service-image {
+    height: 164px;
+}
+
+.service-card:nth-child(3) .service-image {
+    height: 169px;
+}
+
+.service-card:nth-child(4) .service-image {
+    height: 166px;
+}
+
+.service-title {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.373;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: var(--primary-text);
+    padding: 0 20px 20px 0;
+    text-align: left;
+    margin-top: -3px;
+}
+
+.service-card:nth-child(1) .service-title {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Experience Section */
+.experience {
+    padding: 100px 0 150px;
+    position: relative;
+}
+
+.experience-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    flex-direction: row-reverse;
+}
+
+.experience-text {
+    flex: 1;
+    max-width: 515px;
+}
+
+.experience-image {
+    flex: 1;
+    position: relative;
+    max-width: 988px;
+}
+
+.section-title-left {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.063;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: var(--primary-text);
+    margin-bottom: 40px;
+}
+
+.experience-description {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.463;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+    white-space: pre-line;
+}
+
+.experience-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn-secondary {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--primary-text);
+    color: var(--primary-bg);
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.373;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 207px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-orange);
+}
+
+/* Why Choose Section */
+.why-choose {
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose-background {
+    position: absolute;
+    left: 174px;
+    top: 0;
+    width: 1226px;
+    height: 680px;
+    background-image: url('/images/background-image.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    border-radius: 400px 0px 0px 0px;
+    z-index: -1;
+}
+
+.why-choose-content {
+    position: relative;
+}
+
+.why-choose-header {
+    margin-bottom: 60px;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 43px 40px;
+    margin-top: 80px;
+}
+
+.feature-card-wide {
+    grid-column: 1 / -1;
+    max-width: 748px;
+    height: auto;
+    min-height: 102px;
+}
+
+.feature-card {
+    background-color: var(--primary-bg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    height: 365px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature-title {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.463;
+    color: var(--primary-text);
+    margin-bottom: 20px;
+    white-space: pre-line;
+}
+
+.feature-description {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.463;
+    color: var(--primary-text);
+    flex-grow: 1;
+    white-space: pre-line;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-text);
+    border: 1px solid var(--gray-border);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.463;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: fit-content;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-text);
+    color: var(--primary-bg);
+}
+
+/* Key Outcomes Section */
+.key-outcomes {
+    padding: 100px 0;
+    background-color: #C4C4C4;
+    position: relative;
+    background-image: url('/images/section-image-2.svg');
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.section-title-center {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.108;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: var(--primary-text);
+    margin-bottom: 60px;
+}
+
+.outcomes-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.outcomes-icon {
+    flex-shrink: 0;
+}
+
+.outcomes-text {
+    flex: 1;
+}
+
+.outcomes-subtitle {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.593;
+    letter-spacing: 0.02em;
+    color: var(--primary-text);
+    margin-bottom: 20px;
+}
+
+.outcomes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.outcomes-list li {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.593;
+    letter-spacing: 0.02em;
+    color: var(--primary-text);
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.outcomes-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-orange);
+    font-size: 30px;
+}
+
+/* Human Focused Approach Section */
+.human-focused {
+    padding: 200px 0;
+    position: relative;
+    background-color: var(--black);
+    overflow: hidden;
+}
+
+.human-focused-background {
+    position: absolute;
+    left: 14px;
+    top: 3640px;
+    width: 1386px;
+    height: 654px;
+    background-color: var(--black);
+    border-radius: 0px 158px 0px 0px;
+    z-index: 0;
+}
+
+.human-focused-content {
+    display: flex;
+    gap: 100px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 100px;
+    align-items: flex-start;
+}
+
+.human-focused-text {
+    flex: 1;
+    color: var(--primary-bg);
+    max-width: 625px;
+}
+
+.human-focused-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.human-focused-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.333;
+    letter-spacing: 0.01em;
+    color: var(--primary-bg);
+    margin-bottom: 40px;
+}
+
+.human-focused-description {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.593;
+    letter-spacing: 0.02em;
+    color: var(--primary-bg);
+    margin-bottom: 50px;
+    white-space: pre-line;
+}
+
+.contact-form {
+    margin-top: 60px;
+}
+
+.form-title {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.593;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--primary-bg);
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.email-input {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid var(--primary-bg);
+    padding: 15px 20px;
+    border-radius: 0;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.593;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--primary-bg);
+    max-width: 263px;
+    height: 52px;
+}
+
+.email-input::placeholder {
+    color: var(--primary-bg);
+    opacity: 0.7;
+}
+
+.btn-send {
+    background-color: var(--primary-bg);
+    color: var(--black);
+    border: none;
+    padding: 15px 30px;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.593;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 52px;
+}
+
+.btn-send:hover {
+    background-color: var(--accent-orange);
+    color: var(--primary-bg);
+}
+
+.human-focused-image {
+    width: 100%;
+}
+
+.human-focused-image img {
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.quote-section {
+    text-align: center;
+    margin-top: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-text {
+    font-family: 'Indie Flower', cursive;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.593;
+    color: var(--quote-text);
+    max-width: 536px;
+    margin: 0 auto;
+    white-space: pre-line;
+}
+
+/* Map Section */
+.map-section {
+    padding: 0;
+    background-color: transparent;
+}
+
+.map-content {
+    position: relative;
+}
+
+.map-image {
+    position: relative;
+    width: 100%;
+    max-width: 510px;
+}
+
+.map-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-bg);
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.map-location {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.348;
+    color: var(--map-text);
+    margin-bottom: 10px;
+}
+
+.map-link {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.593;
+    color: var(--map-link);
+    text-decoration: none;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+    background-color: var(--primary-bg);
+    text-align: center;
+    border-top: 1px solid rgba(51, 27, 59, 0.1);
+}
+
+.footer p {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* Decorative Elements */
+.decorative-circle {
+    position: absolute;
+    border: 2px dashed rgba(0, 0, 0, 0.26);
+    border-radius: 50%;
+}
+
+.decorative-line {
+    position: absolute;
+    background-color: var(--accent-orange);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .hero-title {
+        font-size: 60px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-title {
+        font-size: 40px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .experience-content {
+        flex-direction: column;
+    }
+    
+    .human-focused-content {
+        flex-direction: column;
+    }
+    
+    .outcomes-content {
+        flex-direction: column;
+    }
+}
+
